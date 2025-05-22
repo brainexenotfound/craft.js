@@ -6,12 +6,13 @@ import { Button } from './user/Button';
 import { Card } from './user/Card';
 import { Container } from './user/Container';
 import { Text } from './user/Text';
+import { ImageUploader } from './user/ImageUploader';
 
 export const Toolbox = () => {
   const { connectors } = useEditor();
 
   return (
-    <Box px={2} py={2}>
+    <Box px={4} py={4}>
       <Grid
         container
         direction="column"
@@ -63,6 +64,15 @@ export const Toolbox = () => {
             data-cy="toolbox-card"
           >
             Card
+          </MaterialButton>
+        </Grid>
+        <Grid container direction="column" item>
+          <MaterialButton
+            ref={(ref) => connectors.create(ref, <ImageUploader />)}
+            variant="contained"
+            data-cy="toolbox-image-uploader"
+          >
+            Image Uploader
           </MaterialButton>
         </Grid>
       </Grid>

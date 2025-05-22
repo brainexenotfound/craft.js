@@ -9,6 +9,7 @@ import { Button } from '../components/user/Button';
 import { Card, CardBottom, CardTop } from '../components/user/Card';
 import { Container } from '../components/user/Container';
 import { Text } from '../components/user/Text';
+import { ImageUploader } from '../components/user/ImageUploader';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           Container,
           CardTop,
           CardBottom,
+          ImageUploader,
         }}
       >
         <Topbar />
